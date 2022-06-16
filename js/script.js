@@ -85,7 +85,7 @@ function check() {
         input_box.style.paddingBottom = "180px";
         // Checks if the difference between max and min for either row or col is less than 600
         // or not. Because it crashes if i enter a large difference greater than 600 but
-        // that could be my laptop, but to make sure it definitely works on all devices i set it to this,
+        // that could be my laptop, but to make sure it definitely works on all devices I set it to this.
     } else if (((max_r_val - min_r_val) > 600) || ((max_c_val - min_c_val) > 600)) {
         div.innerHTML = "Please enter a range where the difference between the max and min is <= 600";
         output.style.display = "none";
