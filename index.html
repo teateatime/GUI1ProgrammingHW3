@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+GUI Assignment 3: Creating an interactive dynamic multiplication table
+Tim Truong, UMass Lowell Computer Science, tim_truong1@student.uml.edu
+Copyright (c) 2022 by Tim Truong. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Updated on 6/15/22 at 10:00pm.
+Instructor: Professor Wenjin Zhou
+Sources of Help: W3Schools and Stackoverflow
+Brief Overview: The site I created for hw 3 for GUI 1 is pretty much a multiplication table where
+it takes in about four numbers from the user where each number that is required to be inputted be
+the minimum and maximum value of the first row and column. So for instance, if the user inputs 5 and 9 for
+the min and max number for row and 4 and 7 for column then it would generate a table that has 5 rows
+and 4 columns where the starting row and column would have the minimum value inputted and at the last row
+and column would have the max value inputted and each corresponding cell based on the row and column
+would have the product of the value at that row and column. So for example at the row where its value is
+at 6 and the column at 7, the cell corresponding to those positions would produce 42 as 6 * 7 = 42.
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dynamic Multiplication Table by Tim Truong</title>
+        <!---CSS link-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body class="main">
+        <div class="wrapper">
+            <h2>Dynamic Multiplication Table</h2>
+            <h3>Created by Tim Truong</h3>
+
+            <!--Container for form box-->
+            <div class="input-container" id="box">
+                <form id="myForm">
+                    <!--Implemented input boxes for number so that users can only input
+                    number related inputs instead random text-->
+                    <!--Added placeholder in order to show what kind of input the user should be
+                    expecting to put in-->
+                    <p>Please Input Number Ranges</p>
+                    <label for="min-col-val"  id="min-clabel">Minimum Column Value:</label>
+                    <input type="number" id="min-cVal" placeholder="1"><br>
+                    <label for="max-col-val"  id="max-clabel">Maximum Column Value:</label>
+                    <input type="number" id="max-cVal" placeholder="1"><br>
+                    <label for="min-row-val" id="min-rlabel">Minimum Row Value:</label>
+                    <input type="number" id="min-rVal" placeholder="1"><br>
+                    <label for="max-row-val" id="max-rlabel">Maximum Row Value:</label>
+                    <input type="number" id="max-rVal" placeholder="1"><br>
+                    <!--Reviewed forms in w3schools site link 
+                        to help me out in this assignment
+                        -> https://www.w3schools.com/html/html_forms.asp-->
+                    <input type="submit" id="submit-btn" value="Submit">
+                    <div class="error" id="msg"></div>
+                </form>
+            </div>
+        </div>
+
+        <footer>Copyright &copy Tim Truong</footer>
+
+        <!--Created a div with class so that when the table is scrolled, the top row and first
+        column would still be visible especially when we are dealing with a large range-->
+        <div class="table-wrapper" id="tab">
+            <table id="Multiplication-Table"></table>
+        </div>
+
+        <!--Javascript links-->
+        <!--jQuery Stuff -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
